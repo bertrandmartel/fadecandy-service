@@ -5,6 +5,15 @@
 ### install   : cp fadecandy /etc/init.d/
 #               update-rc.d fadecandy defaults
 ### uninstall : update-rc.d -f fadecandy remove
+### BEGIN INIT INFO
+# Provides: fadecandy
+# Required-Start:
+# Required-Stop:
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: fadecandy
+# Description: Fadecandy USB service
+### END INIT INFO
 FC_SCRIPT=/bin/fc_script.sh
 PID_FILE=/tmp/fadecandy.pid
 

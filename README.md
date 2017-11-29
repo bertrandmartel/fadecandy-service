@@ -1,14 +1,16 @@
 # Init.d service for Fadecandy server
 
+Start a init.d Fadecandy service at boot on your Raspberry PI
+
 ## Install
 
-Assuming you have Fadecandy server at `/home/pi/fadecandy/server/fcserver` :
-
 ```
-cp fadecandy.json /home/pi/fadecandy/
+git clone git@github.com:bertrandmartel/fadecandy-service.git && cd fadecandy-service
+cp -r fadecandy /home/pi/
 cp fc_script.sh /bin/
-cp fadecandy /etc/init.d/
+cp service/fadecandy /etc/init.d/
 update-rc.d fadecandy defaults
+systemctl enable fadecandy
 ```
 
 ## Usage
